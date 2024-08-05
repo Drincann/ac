@@ -1,0 +1,16 @@
+<expr> ::= <term> <expr_tail>
+<expr_tail> ::= "+" <term> <expr_tail>
+              | "-" <term> <expr_tail>
+              | E
+
+<term> ::= <factor> <term_tail>
+<term_tail> ::= "*" <factor> <term_tail>
+              | "/" <factor> <term_tail>
+              | E
+
+<factor> ::= <Number> | "(" <expr> ")"
+
+# token
+# <Number> ::= <positiveNumber> | <negativeNumber>
+# <positiveNumber> ::= ("0" |  [1-9] [0-9]*) ("." [0-9]+)?
+# <negativeNumber> ::= "-" <positiveNumber>

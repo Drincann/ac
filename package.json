@@ -1,0 +1,19 @@
+{
+  "name": "ac",
+  "description": "Arithmetic expression compiler written in TypeScript",
+  "version": "0.0.1",
+  "author": "drincann",
+  "main": "src/index.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "node --import=tsx --test test/*",
+    "build": "tsc --outDir dist",
+    "start": "node --import=tsx src/index.mts",
+    "dev": "nodemon -w src -w test --ext mts --exec \"npm test\""
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4"
+  }
+}
