@@ -12,8 +12,8 @@ if (arrayContains(args, '-e') || arrayContains(args, '--expression')) {
 }
 
 // REPL
-clInterface.write('Arithmatic Evaluator REPL:\n')
-clInterface.write('Type "exit" to exit\n\n')
+console.log('Arithmatic Evaluator REPL:')
+console.log('Type "exit" to exit\n')
 while (true) {
   // R(ead)
   const expression = await clInterface.question('> ')
@@ -28,7 +28,7 @@ while (true) {
   const result = interpret(expression)
 
   // P(rint)
-  clInterface.write(`< ${result}\n\n`)
+  console.log(`< ${result}`)
 
   // L(oop)
 }
